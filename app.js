@@ -1,10 +1,12 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 let amigosSecretos = [];
+let amigoSorteado = "";
 
 
 function sortearAmigo(){
-    sortearAmigo= amigosSecretos[Math.floor(Math.random() * amigosSecretos.length)];
-    return amigosSecretos[sortearAmigo];    
+    let amigoSorteado= amigosSecretos[Math.floor(Math.random() * amigosSecretos.length)];
+    console.log(amigoSorteado);
+    return amigoSorteado;
 }
 function limpiartexto(){
     document.getElementById("amigo").value = "";
