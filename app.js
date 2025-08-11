@@ -6,7 +6,7 @@ let amigoSorteado = "";
 function sortearAmigo(){
     let amigoSorteado= amigos[Math.floor(Math.random() * amigos.length)];
     modificarTexto("resultado", amigoSorteado);
-    return amigoSorteado;
+    return;
 }
 function limpiartexto(){
     document.getElementById("amigo").value = "";
@@ -29,4 +29,13 @@ function modificarTexto(elemento,texto){
     return;
     
 }
-
+function listaDeAmigos () {
+    let lista = document.getElementById('lista');
+    lista.innerHTML = "";
+    amigos.forEach(function(amigo) {
+        let li = document.createElement('li');
+        li.textContent = amigo;
+        lista.appendChild(li);
+    });
+    return;
+}
