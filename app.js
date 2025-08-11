@@ -5,7 +5,7 @@ let amigoSorteado = "";
 
 function sortearAmigo(){
     let amigoSorteado= amigos[Math.floor(Math.random() * amigos.length)];
-    console.log(amigoSorteado);
+    modificarTexto("resultado", amigoSorteado);
     return amigoSorteado;
 }
 function limpiartexto(){
@@ -13,10 +13,20 @@ function limpiartexto(){
     return;
 }
 function agregarAmigo(){
-    amigosSecretos.push(document.getElementById("amigo").value);
-    limpiartexto();
-    return amigosSecretos;
+        let amigo = document.getElementById('amigo').value; 
+        console.log(amigo)   
+    if (amigo == ""){
+        alert('Por favor inserte un nombre')
+    } else{
+     amigos.push(amigo); 
+        limpiartexto();
+    }
+    return;
 }
-function sortear(){
+function modificarTexto(elemento,texto){
+    let modifico = document.getElementById(elemento)
+    modifico.innerHTML =texto;
+    return;
     
 }
+
